@@ -1,0 +1,46 @@
+
+HƯỚNG DẪN CHỈNH ẢNH VÀ NHẠC CHO TRÌNH PHÁT NHẠC
+--------------------------------------------------
+
+1. Thay đổi ảnh CD (hình tròn quay quay ở giữa)
+
+- Tìm dòng sau trong file index.html:
+  <img id="circle-image" src="background.jpg" alt="Music" class="paused">
+
+- Thay "background.jpg" bằng tên file ảnh bạn muốn dùng (nằm cùng thư mục với file HTML hoặc dẫn đúng đường dẫn đến ảnh).
+
+Ví dụ:
+  <img id="circle-image" src="images/my-image.png" alt="Music" class="paused">
+
+* Lưu ý:
+  - Ảnh nên là hình vuông để tròn đều khi bo góc.
+  - Hỗ trợ định dạng: .jpg, .png, .gif
+
+
+2. Thêm / sửa danh sách nhạc
+
+- Mở file script.js
+- Tìm đoạn code khai báo danh sách nhạc:
+  const playlist = [
+  { file: './music/amthambenem.mp3', title: 'Âm Thầm Bên Em'},
+      ...
+  ];
+
+- Mỗi bài hát có cấu trúc:
+  { file: './music/file.mp3', title: 'Tên hiển thị của bài hát' }
+
+* Cách thêm bài hát mới:
+  - Tải nhạc về và chuyển vào folder "music", đặt lại tên cho dễ nhớ
+  - Mở file script.js sau đó làm tìm đoạn như trên
+  - Thêm dòng mới vào mảng playlist.
+
+Ví dụ:
+  { file: './remix/banhmida.mp3', title: 'Bánh Mì Đa Vũ Trụ' }
+
+* Lưu ý:
+  - Đường dẫn phải chính xác và có phân biệt chữ hoa – thường.
+  - Bài hát sẽ tự động hiển thị trong dropdown (không cần làm gì thêm).
+  - Sau khi thêm, phải đặt dấu "," ở đoạn trước, đoạn cuối cùng mới không thêm
+
+
+XONG! Giờ bạn chỉ cần mở index.html bằng trình duyệt là chơi nhạc được rồi.

@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <title>Music Player</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div id="player">
+    <img id="circle-image" src="background.jpg" alt="Music" class="paused">
+    <div id="song-name">Chọn bài nào đi</div>
+    <div class="progress-container" id="progress-bar">
+      <div class="progress" id="progress-filled"></div>
+    </div>
+    <div class="time">
+      <span id="current-time">0:00</span>
+      <span id="duration">0:00</span>
+    </div>
+    <div class="controls">
+      <button id="prevBtn"><i class="fas fa-backward"></i></button>
+      <button id="play-button"><i class="fas fa-play"></i></button>
+      <button id="nextBtn"><i class="fas fa-forward"></i></button>
+    </div>
+    <select id="playlistSelect">
+      <option disabled selected>Chọn bài hát</option>
+    </select>
+    <audio id="audio"></audio>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
